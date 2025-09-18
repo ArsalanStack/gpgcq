@@ -16,12 +16,11 @@ const logos = [
   { id: '5', img: '/logo5.png', alt: 'Logo 5' },
 ];
 
-const router = useRouter
+const router = useRouter()
 
-useEffect(() => {
-  router.push('gpgcq.vercel.app')
-}, [])
-
+  useEffect(() => {
+    router.push("https://gpgcq.vercel.app");
+  }, [router]);
 
 
 export default function Home() {
