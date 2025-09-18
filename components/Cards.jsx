@@ -64,15 +64,15 @@ export default function Cards() {
         titlePrefix="Principle"
         titleName="Prof: Abdul Razik Sabir Pirkani"
         description="Dedicated to innovation and growth of the GPGCQ sariab."
-        readMoreLink="/alex-johnson"
+        readMoreLink="/abdul-Razik-Sabir-Pirkani"
       />
       <PersonCard
         direction="right"
-        image="https://randomuser.me/api/portraits/women/50.jpg"
-        titlePrefix="Leader Two"
-        titleName="Sarah Williams"
+        image="/vice-principle.jpg"
+        titlePrefix="Vice Principle"
+        titleName="Bashir Mengal"
         description="Focused on community development and sustainability."
-        readMoreLink="/sarah-williams"
+        readMoreLink="/Bashir-Mengal"
       />
     </div>
   );

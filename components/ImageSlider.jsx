@@ -6,8 +6,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "/degree1.png",
-  "/principle.jpeg",
   "/degree3.jpg",
+  "/pics.jpg"
 ];
 
 const variants = {

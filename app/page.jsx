@@ -4,8 +4,6 @@ import ImageSlider from "@/components/ImageSlider";
 import UniversityNewsBoard from "@/components/NewsBoard";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { motion } from 'framer-motion';
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 
 const logos = [
@@ -19,18 +17,6 @@ const logos = [
 
 
 export default function Home() {
-
-
-  const router = useRouter()
-
-    useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.location.hostname === "gpgcq.com") {
-        router.push("https://gpgcq.vercel.app");
-      }
-    }
-  }, [router]);
-
   
   return (
     <>
