@@ -16,14 +16,22 @@ const logos = [
   { id: '5', img: '/logo5.png', alt: 'Logo 5' },
 ];
 
-const router = useRouter()
-
-  useEffect(() => {
-    router.push("https://gpgcq.vercel.app");
-  }, [router]);
 
 
 export default function Home() {
+
+
+  const router = useRouter()
+
+    useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.location.hostname === "gpgcq.com") {
+        router.push("https://gpgcq.vercel.app");
+      }
+    }
+  }, [router]);
+
+  
   return (
     <>
       <ImageSlider />
