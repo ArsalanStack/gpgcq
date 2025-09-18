@@ -4,6 +4,8 @@ import ImageSlider from "@/components/ImageSlider";
 import UniversityNewsBoard from "@/components/NewsBoard";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 const logos = [
@@ -13,6 +15,13 @@ const logos = [
   { id: '4', img: '/logo4.png', alt: 'Logo 4' },
   { id: '5', img: '/logo5.png', alt: 'Logo 5' },
 ];
+
+const router = useRouter
+
+useEffect(() => {
+  router.push('gpgcq.vercel.app')
+}, [])
+
 
 
 export default function Home() {
