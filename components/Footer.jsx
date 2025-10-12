@@ -127,33 +127,6 @@ export default function Footer() {
                   >
                     <Facebook size={20} className="text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
                   </a>
-                  <a
-                    href="https://instagram.com/gpcquetta"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="group relative p-3 bg-white rounded-xl shadow-md hover:shadow-lg border border-orange-100 hover:border-pink-200 transition-all duration-300 hover:scale-110"
-                  >
-                    <Instagram size={20} className="text-gray-600 group-hover:text-pink-600 transition-colors duration-300" />
-                  </a>
-                  <a
-                    href="https://youtube.com/gpcquetta"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    className="group relative p-3 bg-white rounded-xl shadow-md hover:shadow-lg border border-orange-100 hover:border-red-200 transition-all duration-300 hover:scale-110"
-                  >
-                    <Youtube size={20} className="text-gray-600 group-hover:text-red-600 transition-colors duration-300" />
-                  </a>
-                  <a
-                    href="https://linkedin.com/school/gpc-quetta"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="group relative p-3 bg-white rounded-xl shadow-md hover:shadow-lg border border-orange-100 hover:border-blue-200 transition-all duration-300 hover:scale-110"
-                  >
-                    <Linkedin size={20} className="text-gray-600 group-hover:text-blue-700 transition-colors duration-300" />
-                  </a>
                 </div>
               </div>
             </div>
