@@ -116,8 +116,8 @@ if (entry.isIntersecting) {
     {
       icon: Clock,
       title: "Office Hours",
-      content: "Monday - Friday",
-      subtitle: "8:00 AM - 5:00 PM",
+      content: "Monday - Saturday",
+      subtitle: "8:00 AM - 2:00 PM",
       color: "orange"
     }
   ];
@@ -378,21 +378,16 @@ if (entry.isIntersecting) {
         initial="hidden"
         animate="visible"
       >
-        <div className="bg-[var(--primary-background)] text-white px-8 py-4 shadow-lg">
-          <h2 className="text-xl font-bold">Visit Our Campus</h2>
+         <div className="bg-[var(--primary-background)] text-white px-8 py-4 shadow-lg">
+          <h2 className="text-xl font-bold flex items-center gap-2">
+            <MapPin className="w-6 h-6" />
+            Visit our Campus
+          </h2>
         </div>
         <div className="p-8 text-center">
           <p className="text-gray-600 mb-6 text-lg">
             Experience our facilities firsthand and meet our dedicated faculty and staff. We welcome prospective students and their families to visit our campus.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-block bg-[var(--primary-background)] border-[var(--secondry-color)] border-[1px] hover:border-[var(--primary-background)] hover:bg-[var(--secondry-color)] text-white hover:text-[var(--primary-background)] px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer font-semibold text-lg">
-              Schedule Campus Visit
-            </button>
-            <button className="inline-block bg-transparent border-[var(--primary-background)] border-[1px] hover:bg-[var(--primary-background)] text-[var(--primary-background)] hover:text-white px-8 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer font-semibold text-lg">
-              Download Brochure
-            </button>
-          </div>
         </div>
       </motion.div>
     </div>
