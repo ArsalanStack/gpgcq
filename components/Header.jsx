@@ -151,7 +151,6 @@ export default function Header() {
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About' },
                 { href: '/admissions', label: 'Admissions' },
-                { href: '/research', label: 'Research' },
                 { href: '/facilities', label: 'Facilities' },
                 { href: '/services', label: 'Services' },
               ].map((link, index) => (
