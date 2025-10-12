@@ -52,19 +52,19 @@ const Admission = () => {
     return () => observer.disconnect();
   }, []);
 
-  const bsPrograms = [
-    { name: 'BS Chemistry', seats: 100, duration: '4 Years' },
-    { name: 'BS Economics', seats: 100, duration: '4 Years' },
-    { name: 'BS Education', seats: 100, duration: '4 Years' },
-    { name: 'BS English', seats: 100, duration: '4 Years' },
-    { name: 'BS Geography', seats: 100, duration: '4 Years' },
-    { name: 'BS History', seats: 100, duration: '4 Years' },
-    { name: 'BS Mathematics', seats: 100, duration: '4 Years' },
-    { name: 'BS Physics', seats: 100, duration: '4 Years' },
-    { name: 'BS Political Science', seats: 100, duration: '4 Years' },
-    { name: 'BS Sociology', seats: 100, duration: '4 Years' },
-    { name: 'BS Urdu', seats: 100, duration: '4 Years' },
-    { name: 'BS Zoology', seats: 100, duration: '4 Years' }
+const bsPrograms = [
+    { name: 'BS Chemistry', seats: 120, duration: '4 Years' },
+    { name: 'BS Economics', seats: 120, duration: '4 Years' },
+    { name: 'BS Education', seats: 120, duration: '4 Years' },
+    { name: 'BS English', seats: 120, duration: '4 Years' },
+    { name: 'BS Geography', seats: 120, duration: '4 Years' },
+    { name: 'BS History', seats: 120, duration: '4 Years' },
+    { name: 'BS Mathematics', seats: 120, duration: '4 Years' },
+    { name: 'BS Physics', seats: 120, duration: '4 Years' },
+    { name: 'BS Political Science', seats: 120, duration: '4 Years' },
+    { name: 'BS Sociology', seats: 120, duration: '4 Years' },
+    { name: 'BS Urdu', seats: 120, duration: '4 Years' },
+    { name: 'BS Zoology', seats: 120, duration: '4 Years' }
   ];
 
   const admissionSteps = [
@@ -159,7 +159,7 @@ const Admission = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="#application-form" 
+                  href="#admission" 
                   className="inline-block bg-[var(--primary-background)] border-[var(--secondry-color)] border-[1px] hover:border-[var(--primary-background)] hover:bg-[var(--secondry-color)] text-white hover:text-[var(--primary-background)] px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer font-semibold"
                 >
                   Apply Now
@@ -391,6 +391,107 @@ const Admission = () => {
               </div>
             </div>
           )}
+        </div>
+      </div>
+
+    
+      {/* Admission Portal Section */}
+      <div 
+      id='admission'
+        ref={el => sectionsRef.current[2] = el}
+        className="bg-white rounded-xl shadow-xl overflow-hidden mb-8 border border-gray-100"
+      >
+        <div className="bg-[var(--primary-background)] text-white px-8 py-4 shadow-lg">
+          <h2 className="text-xl font-bold flex items-center gap-2">
+            <User className="w-5 h-5" />
+            Online Admission Portal
+          </h2>
+          <p className="text-white/90 text-sm mt-1">Apply online through our admission portal</p>
+        </div>
+        
+        <div className="p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* FA/FSC/1st Year Portal */}
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary-background)] hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50/30 to-white group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className=" bg-blue-600/50 text-white p-3 rounded-lg group-hover:scale-110 transition-transform">
+                  <BookOpen className="w-6 h-6 text-blue-700" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">FA / FSC / 1st Year</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Apply for Intermediate programs (FA, FSC) and first year admissions. Complete your application form online and submit required documents.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>Online Application Form</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>Document Upload Facility</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>Merit List Checking</span>
+                </div>
+              </div>
+              <a 
+                href="#fa-fsc-portal" 
+                className="block bg-[var(--primary-background)] text-center border-[var(--secondry-color)] border-[1px] hover:border-[var(--primary-background)] hover:bg-[var(--secondry-color)] text-white hover:text-[var(--primary-background)] px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer font-semibold"
+              >
+                Apply for FA/FSC
+              </a>
+            </div>
+
+            {/* BS Programs Portal */}
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--primary-background)] hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-indigo-50/30 to-white group">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-blue-600/50 text-white p-3 rounded-lg group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-6 h-6 text-blue-700" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">BS Programs</h3>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Apply for Bachelor of Science (BS) degree programs. Access our online portal to submit your application for any of our 12 BS programs.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>12 BS Programs Available</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>120 Seats per Program</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span>Track Application Status</span>
+                </div>
+              </div>
+              <a 
+                href="#bs-portal" 
+                className="block bg-[var(--primary-background)] border-[var(--secondry-color)] border-[1px] hover:border-[var(--primary-background)] hover:bg-[var(--secondry-color)] text-white hover:text-[var(--primary-background)] px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 text-center hover:shadow-lg cursor-pointer font-semibold"
+              >
+                Apply for BS Programs
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-gradient-to-r from-amber-50/50 to-orange-50/50 border-l-4 border-amber-400 rounded-lg">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5" />
+              <div>
+                <p className="text-amber-800 font-semibold mb-1">Before You Apply:</p>
+                <ul className="text-amber-700 text-sm space-y-1">
+                  <li>• Have all required documents scanned and ready</li>
+                  <li>• Ensure you meet the minimum eligibility criteria</li>
+                  <li>• Keep your CNIC/B-Form number handy</li>
+                  <li>• Double-check all information before submission</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
