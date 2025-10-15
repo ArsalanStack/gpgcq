@@ -19,7 +19,7 @@ export default function Header() {
     <>
       {/* Modern Header with Split Layout */}
       <header className="bg-gradient-to-r from-white via-gray-50 to-white shadow-xl border-b-2" style={{ borderBottomColor: 'var(--primary-background)' }}>
-      
+
 
         {/* Main Header Section */}
         <div className="py-6 bg-white relative overflow-hidden">
@@ -36,7 +36,7 @@ export default function Header() {
                     src="/logo1.png"
                     alt="GPGCQ Logo"
                     className="relative z-10 drop-shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
-                    style={{borderRadius: '50%', padding: '8px' }}
+                    style={{ borderRadius: '50%', padding: '8px' }}
                     priority
                     onError={(e) => (e.currentTarget.src = 'https://placehold.co/70x70/922121/ffffff?text=GPGCQ')}
                   />
@@ -59,10 +59,10 @@ export default function Header() {
 
               {/* Quick Actions - Right Side */}
               <div className="hidden lg:flex items-center space-x-4">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="px-6 py-2 rounded-full font-semibold text-white border-2 transition-all duration-300 hover:scale-105 hover:bg-white hover:shadow-lg transform"
-                  style={{ 
+                  style={{
                     borderColor: 'var(--primary-background)',
                     backgroundColor: 'var(--primary-background)',
                   }}
@@ -104,8 +104,10 @@ export default function Header() {
                   { href: '/', label: 'Home' },
                   { href: '/about', label: 'About' },
                   { href: '/admissions', label: 'Admissions' },
+                  { href: '/bs-results', label: 'BS Results' },
                   { href: '/facilities', label: 'Facilities' },
                   { href: '/services', label: 'Services' },
+
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -131,8 +133,8 @@ export default function Header() {
             </div>
 
             {/* Mobile Quick Action */}
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="lg:hidden px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
               style={{ backgroundColor: 'var(--primary-hover)', color: 'var(--primary-background)' }}
             >
@@ -142,15 +144,15 @@ export default function Header() {
 
           {/* Mobile Menu Dropdown with Animation */}
           <div
-            className={`lg:hidden transition-all duration-500 ease-out ${
-              isMobileMenuOpen ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'
-            } overflow-hidden`}
+            className={`lg:hidden transition-all duration-500 ease-out ${isMobileMenuOpen ? 'max-h-screen opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'
+              } overflow-hidden`}
           >
             <div className="py-4 space-y-3 border-t border-white border-opacity-20">
               {[
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About' },
                 { href: '/admissions', label: 'Admissions' },
+                { href: '/bs-results', label: 'BS Results' },
                 { href: '/facilities', label: 'Facilities' },
                 { href: '/services', label: 'Services' },
               ].map((link, index) => (
@@ -159,7 +161,7 @@ export default function Header() {
                   href={link.href}
                   onClick={handleMobileLinkClick}
                   className="block px-6 py-3 text-sm font-medium text-white rounded-xl mx-2 transition-all duration-300 hover:scale-105 hover:translate-x-2"
-                  style={{ 
+                  style={{
                     animationDelay: `${index * 50}ms`,
                     backgroundColor: 'rgba(255,255,255,0.05)'
                   }}
