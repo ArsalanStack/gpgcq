@@ -49,7 +49,7 @@ export default function Header() {
                     </span>
                   </h1>
                   <p className="text-sm font-semibold text-[var(--primary-background)] tracking-wider mt-1 group-hover:text[var(--primary-background)] transition-colors">
-                    GOVERNMENT BOYS POST GRADUATE COLLEGE SARIAB ROAD QUETTA
+                    GOVERNMENT BOYS POSTGRADUATE COLLEGE SARIAB ROAD QUETTA
                   </p>
                   <p className="text-xs font-medium tracking-widest opacity-75 uppercase" style={{ color: 'var(--primary-background)' }}>
                     Excellence in Education

@@ -58,7 +58,7 @@ const FacilitiesPage = () => {
       'Photocopying and printing facilities'
     ],
     hostel: [
-      'hostel for male students',
+      'Hostel for male students',
       'Furnished rooms with study tables',
       '24/7 security and warden supervision',
       'Common rooms for recreation',
