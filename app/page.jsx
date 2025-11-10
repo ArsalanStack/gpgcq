@@ -4,6 +4,7 @@ import ImageSlider from "@/components/ImageSlider";
 import UniversityNewsBoard from "@/components/NewsBoard";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 import { motion } from 'framer-motion';
+import { ExternalLink, MoreHorizontal } from "lucide-react";
 
 
 const logos = [
@@ -19,11 +20,17 @@ const logos = [
 
 
 export default function Home() {
-  
+
   return (
     <>
       <ImageSlider />
       <Cards />
+
+      <button className="bg-[var(--primary-background)]  border-[var(--secondry-color)] border-[1px] hover:border-[var(--primary-background)]  hover:bg-[var(--secondry-color)] text-white hover:text-[var(--primary-background)] px-16 py-3 mb-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2 w-fit font-semibold mx-auto text-sm  cursor-pointer">
+               <MoreHorizontal />
+        See More Staff Members
+        <MoreHorizontal />
+      </button>
       <UniversityNewsBoard />
       <div className="relative mt-18 min-h-[150px]">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] z-10">

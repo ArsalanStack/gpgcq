@@ -51,8 +51,8 @@ const About = () => {
   ];
 
   const galleryImages = [
-    '/degree1.png',
-    '/gallery1.jpg',
+    'degree1.png',
+    'gallery1.jpg',
     "gallery2.jpg",
     "gallery3.jpeg",
     "gallery4.jpeg",

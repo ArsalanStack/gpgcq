@@ -5,9 +5,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/degree1.png",
-  "/degree3.jpg",
-  "/pics.jpg"
+  "/gallerySlider/image1.png",
+    "/gallerySlider/image2.jpg",
+  "/gallerySlider/image3.jpg",
+  "/gallerySlider/image4.jpg",
+  "/gallerySlider/image5.jpg",
+  "/gallerySlider/image6.jpg",
+  "/gallerySlider/image7.jpg",
+  "/gallerySlider/image8.jpg",
+  "/gallerySlider/image9.jpg",
+  "/gallerySlider/image10.jpg",
+  "/gallerySlider/image11.jpg",
+
 ];
 
 const variants = {

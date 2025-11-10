@@ -42,22 +42,15 @@ function PersonCard({ direction, image, titlePrefix, titleName, description, rea
         <h3 className="text-sm md:text-lg text-gray-700 mb-1">{titlePrefix}</h3>
         <h2 className="text-base md:text-lg font-semibold text-[var(--primary-background)] mb-2">{titleName}</h2>
         <p className="text-gray-600 text-xs md:text-sm mb-3">{description}</p>
-        {readMoreLink && (
-          <a
-            href={readMoreLink}
-            className="px-4 py-2 cursor-pointer bg-[var(--primary-background)] text-white border border-[var(--secondry-color)] rounded-md text-xs md:text-sm transition duration-200 hover:bg-[var(--secondry-color)] hover:text-[var(--primary-background)] hover:border-[var(--primary-background)] mt-auto text-center"
-          >
-            Read More
-          </a>
-        )}
       </div>
     </motion.div>
+    
   );
 }
 
 export default function Cards() {
   return (
-    <div className="flex flex-col md:flex-row gap-6 py-22 items-center justify-center p-6 w-full max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row gap-6 py-20 items-center justify-center p-6 w-full max-w-7xl mx-auto">
       <PersonCard
         direction="left"
         image="/principle1.jpg"
@@ -70,7 +63,7 @@ export default function Cards() {
         direction="right"
         image="/vice-principle.jpg"
         titlePrefix="Vice Principle"
-        titleName="Bashir Mengal"
+        titleName="Prof: Bashir Mengal"
         description="Focused on community development and sustainability."
         readMoreLink="/Bashir-Mengal"
       />
