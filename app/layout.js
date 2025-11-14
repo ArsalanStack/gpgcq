@@ -30,9 +30,12 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
- <script src="https://id-preview--26cda84f-9edb-482e-a1a9-2060748c7271.lovable.app/widget.js" data-bot-id="031dbfa0-5706-4112-b379-f426807feedc"
-          strategy="afterInteractive"
-        />
+ <Script
+  src="https://id-preview--26cda84f-9edb-482e-a1a9-2060748c7271.lovable.app/widget.js"
+  data-bot-id="031dbfa0-5706-4112-b379-f426807feedc"
+  strategy="afterInteractive"
+/>
+
                      </body>
     </html>
   );
