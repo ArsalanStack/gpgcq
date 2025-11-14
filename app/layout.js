@@ -30,14 +30,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
-<Script
-  src="https://botify-ai.lovable.app/widget.js"
-  data-bot-id="b5652677-e635-4405-9df7-2b38e019ea58"
-  strategy="afterInteractive"
-/>
-
-
-                     </body>
+       </body>
     </html>
   );
 }
