@@ -47,55 +47,33 @@ const UniversityNewsBoard = () => {
     'INFO': { icon: Bell, color: 'purple' },
     'EVENT': { icon: Calendar, color: 'orange' },
     'UPDATE': { icon: Zap, color: 'indigo' },
-    'AWARD': { icon: Trophy, color: 'pink' },
-    'WORKSHOP': { icon: GraduationCap, color: 'teal' }
+    'FEES': { icon: Trophy, color: 'pink' },
+    'ADMISSION': { icon: GraduationCap, color: 'teal' }
   };
 
   const notices = [
     {
-      type: 'NEW',
-      title: 'Apply for University ID Card (New, Duplicate)',
-      date: 'June 30, 2025',
-      isDeadline: true
-    },
-    {
-      type: 'EXAM',
-      title: 'Date Sheet of BS (Morning/Self-Supporting) Academic Year-I, Semester-II Session (2024-2028) Final Examination 2025',
-      date: 'July 15, 2025',
-      isStart: true
-    },
-    {
-      type: 'EXAM',
-      title: 'Date Sheet of BS Academic Year-II Semester-IV (Morning & Self-Supporting) Session (2023-2027) and BS Semester-IV Session (2024-2028) Spring Final Examination 2025',
-      date: 'August 1, 2025',
-      isStart: true
+      type: 'FEES',
+      title: 'FSC FEES INFORMATION',
+      date: '11 NOV, 2025',
+      isDeadline: true,
+      fileUrl: 'https://qbmmyunbprjllwqfdrub.supabase.co/storage/v1/object/public/News/FEES_FSC.jpg'
     },
     {
       type: 'INFO',
-      title: 'Admission Form Submission Deadline Extended',
-      date: 'June 15, 2025',
-      isDeadline: true
+      title: 'COMPUTER SCIENSE INTERMIDIATE BOOK INFORMATION',
+      date: 'NOV 15, 2025',
+      isStart: true,
+      fileUrl: "https://qbmmyunbprjllwqfdrub.supabase.co/storage/v1/object/public/News/info_CS.jpg"
     },
     {
-      type: 'EVENT',
-      title: 'Annual Sports Week 2025',
-      date: 'June 10-17, 2025'
+      type: 'ADMISSION',
+      title: 'NEW ADMISSIONS FOR COURSES OF CISD AND NAVTTC',
+      date: 'DEC 1, 2025',
+      isStart: true,
+      fileUrl: "https://qbmmyunbprjllwqfdrub.supabase.co/storage/v1/object/public/News/new_ADMISSION.jpg"
     },
-    {
-      type: 'UPDATE',
-      title: 'Library Renovation Project Update',
-      date: 'September 2025'
-    },
-    {
-      type: 'AWARD',
-      title: 'Student Achievement Recognition Ceremony',
-      date: 'June 25, 2025 at 3:00 PM'
-    },
-    {
-      type: 'WORKSHOP',
-      title: 'Professional Development Workshop Series',
-      date: 'Every Friday, 2:00 PM - 4:00 PM'
-    }
+
   ];
 
   return (
@@ -179,28 +157,37 @@ const UniversityNewsBoard = () => {
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 hover:scrollbar-thumb-gray-400">
               <div className="divide-y divide-gray-100">
                 {notices.map((notice, index) => {
-                  const IconComponent = noticeIcons[notice.type].icon;
-                  const colorClass = noticeIcons[notice.type].color;
+                  const IconComponent = noticeIcons[notice.type]?.icon || FileText;
+                  const colorClass = noticeIcons[notice.type]?.color || "gray";
 
                   return (
-                    <div key={index} className={`p-4 hover:bg-gray-50 transition-all duration-200 border-l-4 border-${colorClass}-500 hover:border-l-6 group`}>
+                    <div
+                      key={index}
+                      onClick={() => notice.fileUrl && window.open(notice.fileUrl, "_blank")}
+                      className={`p-4 hover:bg-gray-50 transition-all duration-200 border-l-4 border-${colorClass}-500 hover:border-l-6 group cursor-pointer`}
+                    >
                       <div className="flex items-start gap-3">
                         <div className="flex items-center gap-2">
-                          <div className={`bg-${colorClass}-100 text-${colorClass}-600 p-1.5 rounded-lg shadow-sm group-hover:scale-110 transition-transform`}>
+                          <div
+                            className={`bg-${colorClass}-100 text-${colorClass}-600 p-1.5 rounded-lg shadow-sm group-hover:scale-110 transition-transform`}
+                          >
                             <IconComponent className="w-3 h-3" />
                           </div>
-                          <div className={`bg-${colorClass}-100 text-${colorClass}-600 px-2 py-1 rounded-full text-xs font-bold shadow-sm`}>
+                          <div
+                            className={`bg-${colorClass}-100 text-${colorClass}-600 px-2 py-1 rounded-full text-xs font-bold shadow-sm`}
+                          >
                             {notice.type}
                           </div>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-semibold text-gray-800 hover:text-[var(--primary-background)] cursor-pointer transition-colors leading-snug text-sm line-clamp-3">
+                          <h4 className="font-semibold text-gray-800 hover:text-[var(--primary-background)] transition-colors leading-snug text-sm line-clamp-3">
                             {notice.title}
                           </h4>
                           <div className="flex items-center gap-1 mt-2">
                             <Clock className="w-3 h-3 text-gray-400" />
                             <p className="text-gray-500 text-xs">
-                              {notice.isDeadline ? 'Deadline: ' : notice.isStart ? 'Starts: ' : ''}{notice.date}
+                              {notice.isDeadline ? "Deadline: " : notice.isStart ? "Starts: " : ""}
+                              {notice.date}
                             </p>
                           </div>
                         </div>
